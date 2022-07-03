@@ -1,0 +1,33 @@
+#form span {
+    text-transform: capitalize;
+    color: #000;
+}
+
+.btn-custom {
+    float: left;
+    height: 3rem;
+    line-height: 3rem;
+    font-weight: bold;
+}
+
+.container-custom {
+    margin-top: 50px;
+}
+
+body {
+    background-color: #DCDCDC;
+}
+
+#result-modal {
+    width: 611px;
+}
+
+#display-image-resource {
+    max-height: 352px; 
+    display: flex; 
+    margin: 0 auto;
+}
+
+.card-image img {
+    height: 477px;
+}

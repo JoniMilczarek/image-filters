@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Processamento de Imagem</title>
+</head>
+<body>
+
+    <div class="container container-custom">
+        <div class="row">
+            <div>
+                <form id="form" style="display: flex; justify-content: space-between;">
+                    <p>
+                      <label>
+                        <input name="group1" id="addition"type="radio" checked/>
+                        <span>addition</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input name="group1" id="subtraction"type="radio"  />
+                        <span>subtraction</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input name="group1" id="multiplication"type="radio"/>
+                        <span>multiplication</span>
+                      </label>
+                    </p>
+                    <p>
+                        <label>
+                          <input name="group1" id="division"type="radio" />
+                          <span>division</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input name="group1" id="average"type="radio" />
+                          <span>average</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input name="group1" id="blending"type="radio"  />
+                          <span>blending</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input name="group1" id="not"type="radio" />
+                          <span>not</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input name="group1" id="or"type="radio" />
+                          <span>or</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input name="group1" id="and"type="radio" />
+                          <span>and</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input name="group1" id="xor"type="radio"  />
+                          <span>xor</span>
+                        </label>
+                    </p>
+                    <button onclick="submitImageOperation(event)">Submit</button>
+                  </form>
+            </div>
+            <div class="col s6">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="branco.png" id="display-image-one">
+                  </div>
+                  <div class="card-content">
+                      <div class="file-field input-field">
+                          <div class="btn-custom">
+                              <span>Upload</span>
+                              <input type="file" id="image-one">
+                          </div>
+                          <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text" placeholder="Adicione uma imagem...">
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col s6">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="branco.png" id="display-image-two" >
+                  </div>
+                  <div class="card-content">
+                      <div class="file-field input-field">
+                          <div class="btn-custom">
+                              <span>Upload</span>
+                              <input type="file" id="image-two">
+                          </div>
+                          <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text" placeholder="Adiciona uma imagem...">
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div id="result-modal" class="modal">
+            <div class="modal-content">
+                <img src="" id="display-image-result">
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+            </div>
+          </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="scripts.js"></script>
+
+</html>
