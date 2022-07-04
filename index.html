@@ -14,7 +14,15 @@
 <body>
 
     <div class="container container-custom">
-        <div class="row">
+        <label>
+          <input name="group" id="pt-1"type="radio" checked/>
+          <span>pt-1</span>
+        </label>
+        <label>
+          <input name="group" id="pt-2"type="radio"/>
+          <span>pt-2</span>
+        </label>
+        <div class="row pt-1">
             <div>
                 <form id="form" style="display: flex; justify-content: space-between;">
                     <p>
@@ -117,7 +125,74 @@
                   </div>
                 </div>
             </div>
-        </div>
+        </div>        
+        <div class="row pt-2" style="display: none;">
+          <div>
+              <form id="form2" style="display: flex; justify-content: space-between;">
+                <p>
+                  <label>
+                    <input name="group1" id="histograma"type="radio" checked/>
+                    <span>Histograma</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="group1" id="media"type="radio"  />
+                    <span>Média</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="group1" id="minimo"type="radio"/>
+                    <span>Mínimo</span>
+                  </label>
+                </p>
+                <p>
+                    <label>
+                      <input name="group1" id="maximo"type="radio" />
+                      <span>Máximo</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="group1" id="mediana"type="radio" />
+                      <span>Mediana</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="group1" id="ordem"type="radio"  />
+                      <span>Ordem</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="group1" id="conservativa"type="radio" />
+                      <span>Suavização Conservativa</span>
+                    </label>
+                  </p>
+                <button onclick="submitImageOperationPt2(event)">Submit</button>
+              </form>
+          </div>
+          <div class="col s6">
+              <div class="card">
+                <div class="card-image">
+                  <img src="branco.png" id="image-pt2">
+                </div>
+                <div class="card-content">
+                    <div class="file-field input-field">
+                        <div class="btn-custom">
+                            <span>Upload</span>
+                            <input type="file" id="image">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Adicione uma imagem...">
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
         <div id="result-modal" class="modal">
             <div class="modal-content">
                 <img src="" id="display-image-result">
@@ -128,6 +203,7 @@
           </div>
     </div>
 </body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="scripts.js"></script>

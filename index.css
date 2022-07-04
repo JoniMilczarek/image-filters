@@ -19,7 +19,8 @@ body {
 }
 
 #result-modal {
-    width: 611px;
+    width: fit-content;
+    height: fit-content;
 }
 
 #display-image-resource {
