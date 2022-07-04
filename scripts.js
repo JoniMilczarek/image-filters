@@ -1,6 +1,7 @@
 let image_one_input = document.getElementById("image-one");
 let image_pt2 = document.getElementById("image");
 let image_two_input = document.getElementById("image-two");
+google.charts.load("current", { packages: ["corechart"] });
 
 var submitImageOperation = function(event) {
     event.preventDefault();
@@ -51,8 +52,8 @@ var histograma = (matrix, width, convolucao, height) => {
     const [, newDistribution] = histogram(histogramResult, width);
     const oldChartValues = transformToDrawChart(oldDistribution);
     const newChartValues = transformToDrawChart(newDistribution);
-    drawChart(oldChartValues, 'Pixel distribution (before)', 'before_distribution');
-    drawChart(newChartValues, 'Pixel distribution (after)','after_distribution');
+    drawChart(oldChartValues, '(before)', 'histograma_before');
+    drawChart(newChartValues, '(after)', 'histograma_after');
     matrixToImage(histogramResult, width, height);
 }
 
@@ -334,7 +335,6 @@ function matrixToImage(matrix, width, height){
 }
 
 function showResult(image) {
-    console.log("cheguei");
     let outputResult = document.getElementById("display-image-result");
     outputResult.src = image.src;
     openResultModal();
